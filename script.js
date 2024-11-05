@@ -11,12 +11,48 @@ let starFire = 23 //hp dmg
 
 function arcaneScepter(){
     let fungusTotal = fungusHP
-
+    let arcaneCost = 12
+    let apTotal = playerAP
     fungusHP =  fungusTotal - arcaneScepterAtk
-    console.log('Fungus remaining HP = ', fungusHP)
+    playerAP = apTotal - arcaneCost
+    console.log('Fungus remaining Fungus HP after Arcane Scepter: ', fungusHP)
+    console.log('Player remaining AP after Arcane Scepter: ', playerAP)
     render()
     }
 
+    function entangleAtk(){
+        let fungusTotal = fungusHP
+        let apTotal = playerAP
+        let entangleCost = 23
+        fungusHP = fungusTotal - entangle
+        playerAP = apTotal - entangleCost
+        console.log('Fungus remaining Fungus HP after Entangle: ', fungusHP)
+    console.log('Player remaining AP after Entangle: ', playerAP)
+        render()
+    }
+
+    function dragonBladeAtk(){
+        let fungusTotal = fungusHP
+        let apTotal = playerAP
+        let dragonBladeCost = 38
+        fungusHP = fungusTotal - dragonBlade
+        playerAP = apTotal - dragonBladeCost
+        console.log('Fungus remaining Fungus HP after Arcane Scepter: ', fungusHP)
+    console.log('Player remaining AP after Arcane Scepter: ', playerAP)
+        render()
+    }
+
+function StarFireAtk(){
+    let fungusTotal = fungusHP
+    let apTotal = playerAP
+    let StarFireCost = 33
+    fungusHP = fungusTotal - starFire
+    playerAP = apTotal - StarFireCost
+    console.log('Fungus remaining Fungus HP after Arcane Scepter: ', fungusHP)
+    console.log('Player remaining AP after Arcane Scepter: ', playerAP)
+    render()
+
+}
 
 function onReady() {
     console.log("Ready to go!")
@@ -35,6 +71,7 @@ function render() {
     const apText = document.querySelector('.ap-text')
     console.log('Testing new Variable', fungusHP)
     hpText.innerText = fungusHP + ' HP'
+    apText.innerText = playerAP + ' AP'
     
 }
 
